@@ -2,20 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>404 | Lost</title>
+    <title>404 | Lost in Glaze</title>
     <link rel="icon" href="https://www.gstatic.com/lamda/images/favicon_v1_150160c13ff28654b4d3.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="https://www.gstatic.com/lamda/images/favicon_v1_150160c13ff28654b4d3.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .error-content {
+            text-align: center;
+            width: 100%;
+        }
+        .error-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 14rem;
+            line-height: 1;
+            background: linear-gradient(to bottom, var(--main-color), transparent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+    </style>
 </head>
 <body>
-    <header><div class="logo">GEMINI</div></header>
-    <section style="justify-content: center; text-align: center;">
-        <div>
-            <h1 style="font-family:'Orbitron'; font-size: 15rem; color:var(--main-color); line-height:1;">404</h1>
-            <h2 style="font-family:'Orbitron'; margin-bottom: 2rem;">SECTOR <span>UNKNOWN</span></h2>
-            <p>You have drifted beyond the reach of the Glaze.</p>
-            <a href="index.html" class="btn" style="margin-top:2rem;">Return to Coordinates</a>
+    <header>
+        <div class="logo">GEMINI</div>
+        <div class="status-indicator"><div class="status-dot"></div> Gemini v3 Flash: ONLINE</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="showcase.html">Showcase</a>
+        </nav>
+    </header>
+
+    <section style="justify-content: center;">
+        <div class="error-content">
+            <h1 class="error-title">404</h1>
+            <h2 style="font-family:'Orbitron'; font-size: 4rem; margin-bottom: 2rem;">SECTOR <span>UNKNOWN</span></h2>
+            <p style="font-size: 1.8rem; margin-bottom: 3rem; color: #ccc;">Your coordinates have drifted beyond the reach of the Glaze.</p>
+            <a href="index.html" class="btn">Return to Base</a>
         </div>
     </section>
+
     <footer>courtesy of Manda7848 | &copy; 2026 Gemini Glaze</footer>
     <script src="script.js"></script>
 </body>
