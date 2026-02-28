@@ -11,24 +11,32 @@ document.addEventListener('mousemove', (e) => {
 });
 
 function animate() {
+    // Increased following speed (0.15) for a tighter feel
     let dx = mouseX - rocketX;
     let dy = mouseY - rocketY;
-    rocketX += dx * 0.1;
-    rocketY += dy * 0.1;
-    rocket.style.left = rocketX + 'px';
-    rocket.style.top = rocketY + 'px';
+    
+    rocketX += dx * 0.15; 
+    rocketY += dy * 0.15;
+    
+    // Offset the rocket slightly so it follows "behind" the actual cursor
+    rocket.style.left = (rocketX + 15) + 'px';
+    rocket.style.top = (rocketY + 15) + 'px';
+    
     const angle = Math.atan2(dy, dx) * (180 / Math.PI);
     rocket.style.transform = `translate(-50%, -50%) rotate(${angle + 45}deg)`;
+    
     requestAnimationFrame(animate);
 }
 animate();
 
+// Hint Popup Logic
 const popup = document.getElementById('hint-popup');
 if (popup) {
     setTimeout(() => { popup.classList.add('active'); }, 2500);
     setTimeout(() => { popup.classList.remove('active'); }, 14500); 
 }
 
+// Easter Egg Logic
 let clicks = 0;
 const logo = document.querySelector('.logo');
 if (logo) {

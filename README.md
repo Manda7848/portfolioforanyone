@@ -1,2 +1,4 @@
 # portfolioforanyone
-a planet, emini maybe?
+a planet, Gemini maybe?
+
+
