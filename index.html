@@ -2,130 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gemini Glaze | Digital Portfolio</title>
+    <title>Gemini Glaze | Home</title>
+    <link rel="icon" type="image/svg+xml" href="https://www.gstatic.com/lamda/images/favicon_v1_150160c13ff28654b4d3.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Home-specific Animations */
-        .home {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 8rem;
-        }
-
-        .home-content h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 5.5rem;
-            font-weight: 700;
-            line-height: 1.2;
-        }
-
-        .home-content h3 {
-            font-size: 3.2rem;
-            margin: 1.5rem 0;
-            font-weight: 700;
-        }
-
-        .home-content p {
-            font-size: 1.6rem;
-            line-height: 1.8;
-            margin-bottom: 3rem;
-            max-width: 500px;
-        }
-
-        .home-img img {
-            width: 32vw;
-            border-radius: 50%;
-            box-shadow: 0 0 60px rgba(142, 117, 255, 0.4);
-            animation: float 4s ease-in-out infinite;
-            border: 2px solid rgba(255, 255, 255, 0.1);
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-25px); }
-        }
-
-        /* Typing Text Animation */
-        .typing-text span::before {
-            content: "";
-            animation: words 15s infinite;
-            color: var(--secondary-color);
-        }
-
-        @keyframes words {
-            0%, 20% { content: "AI Assistant"; }
-            21%, 40% { content: "Creative Partner"; }
-            41%, 60% { content: "Code Specialist"; }
-            61%, 80% { content: "Data Analyst"; }
-            81%, 100% { content: "Multimodal Expert"; }
-        }
-
-        .social-icons a {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 4.5rem;
-            height: 4.5rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: 0.1rem solid var(--main-color);
-            font-size: 2rem;
-            border-radius: 50%;
-            color: var(--main-color);
-            margin: 0 1.5rem 3rem 0;
-            transition: 0.3s ease;
-        }
-
-        .social-icons a:hover {
-            background: var(--main-color);
-            color: var(--bg-color);
-            box-shadow: 0 0 20px var(--main-color);
-            transform: translateY(-5px);
-        }
-
-        @media (max-width: 995px) {
-            .home { flex-direction: column-reverse; text-align: center; gap: 4rem; }
-            .home-img img { width: 60vw; }
-            .home-content h1 { font-size: 4rem; }
-            .home-content p { margin: 0 auto 3rem; }
-        }
-    </style>
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo">GEMINI</a>
+        <div class="logo">GEMINI</div>
+        <div class="status-indicator"><div class="status-dot"></div> Gemini v3 Flash: ONLINE</div>
         <nav>
             <a href="index.html" class="active">Home</a>
+            <a href="showcase.html">Showcase</a>
             <a href="services.html">Services</a>
-            <a href="skills.html">Skills</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
 
+    <div id="hint-popup" class="glaze-popup">
+        <h4>System Message</h4>
+        <p>A hidden power lies within the "Gemini" sigil. Five rhythmic pulses may reveal the true Glaze.</p>
+    </div>
+
     <section class="home">
         <div class="home-content">
-            <h1>Hi, I'm <span>Gemini</span></h1>
-            <h3 class="typing-text">I'm a <span></span></h3>
-            <p>I am a high-performance AI designed to process information across text, code, images, and audio. Step into the future of digital collaboration with the Glaze interface.</p>
-            
-            <div class="social-icons">
-                <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://x.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://discord.com" target="_blank"><i class="fa-brands fa-discord"></i></a>
+            <h1 style="font-size: 7rem;">GEMINI <span>GLAZE</span></h1>
+            <p style="font-size: 1.8rem; margin: 2rem 0; max-width: 600px;">The definitive portfolio for the multimodal age. High polish. Zero friction. Total mastery.</p>
+            <div class="socials" style="margin-bottom: 30px;">
+                <a href="https://github.com/google-gemini" target="_blank" style="color:white; font-size: 2.5rem; margin-right: 20px;"><i class="fa-brands fa-github"></i></a>
+                <a href="https://x.com/GoogleAI" target="_blank" style="color:white; font-size: 2.5rem;"><i class="fa-brands fa-x-twitter"></i></a>
             </div>
-            
-            <div class="btn-group">
-                <a href="services.html" class="btn">Explore More</a>
-                <a href="https://gemini.google.com" target="_blank" class="btn" style="background: transparent; border: 2px solid var(--main-color); color: var(--main-color); margin-left: 2rem;">Try Gemini</a>
-            </div>
-        </div>
-
-        <div class="home-img">
-            <img src="https://static.vecteezy.com/system/resources/previews/055/687/055/non_2x/rectangle-gemini-google-icon-symbol-logo-free-png.png" alt="Gemini Logo">
+            <a href="showcase.html" class="btn">View Showcase</a>
         </div>
     </section>
+
+    <footer>courtesy of manda7848 | &copy; 2026 Gemini Glaze</footer>
+    <script src="script.js"></script>
 </body>
 </html>

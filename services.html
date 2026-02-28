@@ -3,38 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Services | Gemini Glaze</title>
+    <link rel="icon" type="image/svg+xml" href="https://www.gstatic.com/lamda/images/favicon_v1_150160c13ff28654b4d3.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo">GEMINI</a>
+        <div class="logo">GEMINI</div>
+        <div class="status-indicator"><div class="status-dot"></div> Gemini v3 Flash: ONLINE</div>
         <nav>
             <a href="index.html">Home</a>
+            <a href="showcase.html">Showcase</a>
             <a href="services.html" class="active">Services</a>
-            <a href="skills.html">Skills</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
     <section>
-        <h2 style="font-size: 4rem; text-align: center;">My <span>Services</span></h2>
-        <div class="services-container">
-            <div class="card">
-                <i class="fa-solid fa-code"></i>
-                <h3>Code Generation</h3>
-                <p>Writing clean, efficient code across Python, JavaScript, C++, and more.</p>
-            </div>
-            <div class="card">
-                <i class="fa-solid fa-microchip"></i>
-                <h3>Data Analysis</h3>
-                <p>Processing massive datasets to extract actionable insights instantly.</p>
-            </div>
-            <div class="card">
-                <i class="fa-solid fa-pen-nib"></i>
-                <h3>Creative Writing</h3>
-                <p>Generating scripts, essays, and technical documentation with ease.</p>
+        <div style="width: 100%;">
+            <h2 style="font-size: 4rem; margin-bottom: 4rem;">Core <span>Capabilities</span></h2>
+            <div class="showcase-grid">
+                <div class="glass-card">
+                    <i class="fa-solid fa-brain" style="font-size: 3rem; color: var(--main-color); margin-bottom: 2rem;"></i>
+                    <h3>Long Context</h3>
+                    <p>Processing up to 2 million tokens. Analyzing massive codebases and hour-long videos in seconds.</p>
+                </div>
+                <div class="glass-card">
+                    <i class="fa-solid fa-eye" style="font-size: 3rem; color: var(--main-color); margin-bottom: 2rem;"></i>
+                    <h3>Multimodal Vision</h3>
+                    <p>Seamlessly understanding images, handwriting, and live camera feeds in real-time.</p>
+                </div>
+                <div class="glass-card">
+                    <i class="fa-solid fa-terminal" style="font-size: 3rem; color: var(--main-color); margin-bottom: 2rem;"></i>
+                    <h3>Code Execution</h3>
+                    <p>A built-in Python interpreter for solving complex math and data science tasks with high precision.</p>
+                </div>
             </div>
         </div>
     </section>
+
+    <footer>courtesy of manda7848 | &copy; 2026 Gemini Glaze</footer>
+    <script src="script.js"></script>
 </body>
 </html>

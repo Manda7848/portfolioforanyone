@@ -2,126 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Gemini Glaze</title>
+    <link rel="icon" type="image/svg+xml" href="https://www.gstatic.com/lamda/images/favicon_v1_150160c13ff28654b4d3.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Glass-morphism Contact Card */
-        .contact-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding-top: 2rem;
-        }
-
-        .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 2.5rem;
-            padding: 4rem;
-            width: 100%;
-            max-width: 600px;
-            text-align: center;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-        }
-
-        .glass-card h2 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            font-family: 'Orbitron', sans-serif;
-        }
-
-        .official-link {
-            margin: 3rem 0;
-            padding: 2rem;
-            background: rgba(142, 117, 255, 0.1);
-            border-radius: 1.5rem;
-            border: 1px dashed var(--main-color);
-        }
-
-        .official-link p {
-            font-size: 1.4rem;
-            margin-bottom: 1.5rem;
-            color: #ccc;
-        }
-
-        .input-group {
-            margin-bottom: 2rem;
-            text-align: left;
-        }
-
-        .input-group input, .input-group textarea {
+        .form-group { margin-bottom: 2rem; }
+        input, textarea {
             width: 100%;
             padding: 1.5rem;
             background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 1rem;
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
             color: white;
             font-size: 1.4rem;
-            transition: 0.3s;
         }
-
-        .input-group input:focus, .input-group textarea:focus {
-            border-color: var(--main-color);
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .social-icons {
-            margin-top: 2rem;
-        }
-        
-        .gemini-btn {
-            background: linear-gradient(45deg, var(--main-color), var(--secondary-color));
-            color: white !important;
-            border: none;
-        }
+        input:focus { border-color: var(--main-color); }
     </style>
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo">GEMINI</a>
+        <div class="logo">GEMINI</div>
+        <div class="status-indicator"><div class="status-dot"></div> Gemini v3 Flash: ONLINE</div>
         <nav>
             <a href="index.html">Home</a>
+            <a href="showcase.html">Showcase</a>
             <a href="services.html">Services</a>
-            <a href="skills.html">Skills</a>
             <a href="contact.html" class="active">Contact</a>
         </nav>
     </header>
 
-    <section class="contact-container">
-        <div class="glass-card">
-            <h2>Get in <span>Touch</span></h2>
+    <section style="justify-content: center;">
+        <div class="glass-card" style="max-width: 600px; width: 100%; text-align: center;">
+            <h2 style="margin-bottom: 2rem;">Join the <span>Mission</span></h2>
+            <p style="margin-bottom: 3rem; color: #ccc;">Have a project? Launch your inquiry into the Glaze.</p>
             
-            <div class="official-link">
-                <p>Looking for the official AI interface?</p>
-                <a href="https://gemini.google.com" target="_blank" class="btn gemini-btn">
-                    <i class="fa-solid fa-sparkles"></i> Launch Official Gemini
-                </a>
-            </div>
-
-            <form action="#">
-                <div class="input-group">
-                    <input type="text" placeholder="Your Name">
-                </div>
-                <div class="input-group">
-                    <input type="email" placeholder="Email Address">
-                </div>
-                <div class="input-group">
-                    <textarea rows="4" placeholder="How can Gemini help you today?"></textarea>
-                </div>
-                <button type="submit" class="btn">Send Message</button>
+            <form>
+                <div class="form-group"><input type="text" placeholder="Identity/Name"></div>
+                <div class="form-group"><input type="email" placeholder="Communication/Email"></div>
+                <div class="form-group"><textarea rows="4" placeholder="Your Message"></textarea></div>
+                <button type="submit" class="btn" style="width: 100%;">Transmit Data</button>
             </form>
 
-            <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-discord"></i></a>
+            <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--glass-border);">
+                <p style="margin-bottom: 2rem; font-size: 1.2rem;">OFFICIAL CHANNELS</p>
+                <a href="https://gemini.google.com" target="_blank" class="btn" style="background: transparent; border: 1px solid var(--secondary-color); color: var(--secondary-color);">Launch Official Gemini</a>
             </div>
         </div>
     </section>
+
+    <footer>courtesy of manda7848 | &copy; 2026 Gemini Glaze</footer>
+    <script src="script.js"></script>
 </body>
 </html>
