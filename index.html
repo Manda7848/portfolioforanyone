@@ -3,38 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gemini Glaze</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Gemini Glaze | Digital Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Home-specific Animations */
+        .home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8rem;
+        }
+
+        .home-content h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 5.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .home-content h3 {
+            font-size: 3.2rem;
+            margin: 1.5rem 0;
+            font-weight: 700;
+        }
+
+        .home-content p {
+            font-size: 1.6rem;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            max-width: 500px;
+        }
+
+        .home-img img {
+            width: 32vw;
+            border-radius: 50%;
+            box-shadow: 0 0 60px rgba(142, 117, 255, 0.4);
+            animation: float 4s ease-in-out infinite;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-25px); }
+        }
+
+        /* Typing Text Animation */
+        .typing-text span::before {
+            content: "";
+            animation: words 15s infinite;
+            color: var(--secondary-color);
+        }
+
+        @keyframes words {
+            0%, 20% { content: "AI Assistant"; }
+            21%, 40% { content: "Creative Partner"; }
+            41%, 60% { content: "Code Specialist"; }
+            61%, 80% { content: "Data Analyst"; }
+            81%, 100% { content: "Multimodal Expert"; }
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 4.5rem;
+            height: 4.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 0.1rem solid var(--main-color);
+            font-size: 2rem;
+            border-radius: 50%;
+            color: var(--main-color);
+            margin: 0 1.5rem 3rem 0;
+            transition: 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background: var(--main-color);
+            color: var(--bg-color);
+            box-shadow: 0 0 20px var(--main-color);
+            transform: translateY(-5px);
+        }
+
+        @media (max-width: 995px) {
+            .home { flex-direction: column-reverse; text-align: center; gap: 4rem; }
+            .home-img img { width: 60vw; }
+            .home-content h1 { font-size: 4rem; }
+            .home-content p { margin: 0 auto 3rem; }
+        }
+    </style>
 </head>
 <body>
     <header>
-   <a href="#" class="logo">Gemini</a>
-   <nav>
-    <a href="#">Services</a>
-    <a href="#">Skills</a>
-    <a href="#">Education</a>
-    <a href="#">Experience</a>
-    <a href="#">Contact</a>
-   </nav>
-   <section class="home">
-    <div class="home-img">
-        <img src="https://static.vecteezy.com/system/resources/previews/055/687/055/non_2x/rectangle-gemini-google-icon-symbol-logo-free-png.png" alt="Gemini Logo">
-    </div>
-    <div class="home-content">
-        <h1>
-            Hi, it's <span>Gemini </span>
-        </h1>
-        <h3 class="typing-text">I'm a <span></span></h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
-        <div class="social-icons">
-            <a href="#"><i class="fa-brands-fa-linkedin"></i></a>
-            <a href="#"><i class="fa-brands-fa-github"></i></a>
-            <a href="#"><i class="fa-brands-fa-x-twitter"></i></a>
-            <a href="#"><i class="fa-brands-fa-instagram"></i></a>
-        </div>
-        <a href="#" class="btn">Talk to me today!</a>
-    </div>
-   </section>
+        <a href="index.html" class="logo">GEMINI</a>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="services.html">Services</a>
+            <a href="skills.html">Skills</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </header>
+
+    <section class="home">
+        <div class="home-content">
+            <h1>Hi, I'm <span>Gemini</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>I am a high-performance AI designed to process information across text, code, images, and audio. Step into the future of digital collaboration with the Glaze interface.</p>
+            
+            <div class="social-icons">
+                <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://x.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://discord.com" target="_blank"><i class="fa-brands fa-discord"></i></a>
+            </div>
+            
+            <div class="btn-group">
+                <a href="services.html" class="btn">Explore More</a>
+                <a href="https://gemini.google.com" target="_blank" class="btn" style="background: transparent; border: 2px solid var(--main-color); color: var(--main-color); margin-left: 2rem;">Try Gemini</a>
+            </div>
+        </div>
+
+        <div class="home-img">
+            <img src="https://static.vecteezy.com/system/resources/previews/055/687/055/non_2x/rectangle-gemini-google-icon-symbol-logo-free-png.png" alt="Gemini Logo">
+        </div>
+    </section>
 </body>
 </html>
